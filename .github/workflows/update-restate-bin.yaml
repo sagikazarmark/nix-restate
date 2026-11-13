@@ -38,7 +38,7 @@ jobs:
         run: echo "version=$(jq -r .version pkgs/restate-bin/sources.json)" >> "$GITHUB_OUTPUT"
 
       - name: Create pull request
-        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        uses: peter-evans/create-pull-request@3ffccacd46053766916f087ce41d627c0b8cf2d1 # v8.1.3
         with:
           # PRs opened with GITHUB_TOKEN don't trigger CI; set UPDATE_TOKEN (PAT or app token) to get checks on the PR
           token: ${{ secrets.UPDATE_TOKEN || secrets.GITHUB_TOKEN }}
